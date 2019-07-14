@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+.cont {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  .card {
+    height: 20rem;
+    #insert {
+      max-width: 35rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border: 1px solid black;
+    }
+
+    span {
+      position: absolute;
+      top: 80%;
+      width: 100%;
+      text-align: center;
+      height: 20%;
+      background: black;
+      padding-top: 4%;
+      opacity: 0.8;
+
+      color: white;
+      opacity: 0.8;
+    }
+
+    span:hover {
+      transition-duration: 0.3s;
+      top: 78%;
+      height: 22%;
+    }
+  }
+  .card:hover {
+    span {
+      transition-duration: 0.3s;
+      top: 76%;
+      height: 24%;
+    }
+  }
+}

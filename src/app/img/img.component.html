@@ -1,0 +1,58 @@
+<div class="cont">
+  <div class="card" style="width:25rem ;height:100%;">
+    <div class="card-body">
+      <form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
+        <div class="imgCenter">
+          <img
+            [src]="imgSrc"
+            width="350px "
+            (click)="openFile.click()"
+            height="250px"
+          />
+        </div>
+        <div class="form-group">
+          <label>Select file to upload</label>
+          <input
+            type="file"
+            #openFile
+            (change)="onSelect($event)"
+            placeholder="select file..."
+            class="form-control"
+            formControlName="imgUrl"
+          />
+          <div
+            class="text-danger small"
+            *ngIf="isSubmitted && formControls.imgUrl.errors?.required"
+          >
+            This field is required
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="Enter Caption"
+            class="form-control"
+            formControlName="caption"
+          />
+          <div
+            class="text-danger small"
+            *ngIf="isSubmitted && formControls.caption.errors?.required"
+          >
+            This field is required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <a routerLink="/gallery" class="btn btn-primary float-right"
+            >Goto Gallery</a
+          >
+        </div>
+        <div class="form-group bt">
+          <button type="submit" class="btn btn-success">
+            Upload
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

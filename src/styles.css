@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+.cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+main .card {
+  height: 20rem;
+}
+
+main .card #insert {
+  max-width: 35rem;
+}
+
+main .card img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+main .card span {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  text-align: center;
+  height: 20%;
+  background: black;
+  padding-top: 4%;
+  opacity: 0.8;
+  color: white;
+  opacity: 0.8;
+}
+
+main .card span:hover {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  top: 78%;
+  height: 22%;
+}
+
+main .card:hover span {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  top: 76%;
+  height: 24%;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,9 @@
+<main>
+  <a class="card" routerLink="/upload">
+    <img id="insert" src="./assets/img/cam.jpg" />
+  </a>
+  <div class="card" *ngFor="let img of imgs">
+    <img [src]="img.getDownloadURL" />
+    <span class="cp">{{ img.caption }}</span>
+  </div>
+</main>
